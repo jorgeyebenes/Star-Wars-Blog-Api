@@ -7,8 +7,12 @@ import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 
-import { Navbar } from "./component/navbar";
+
 import { Footer } from "./component/footer";
+import { NavbarMain } from "./component/NavbarMain";
+import { Characters } from "./component/Characters";
+import { Planets } from "./component/Planets";
+import { Favourites } from "./component/Favourites";
 
 //create your first component
 const Layout = () => {
@@ -20,9 +24,12 @@ const Layout = () => {
 		<div>
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
-					<Navbar />
+					<NavbarMain />
 					<Routes>
 						<Route path="/" element={<Home />} />
+						<Route path="/Characters" element={<Characters />} />
+						<Route path="/Planets" element={<Planets />} />
+						<Route path="/Favourites" element={<Favourites />} />
 						<Route path="/demo" element={<Demo />} />
 						<Route path="/single/:theid" element={<Single />} />
 						<Route path="*" element={<h1>Not found!</h1>} />
