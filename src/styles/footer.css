@@ -1,0 +1,6 @@
+.text-footer {
+    color: white;
+    display: inline-block; /* Makes the paragraph shrink to fit the content */
+    padding: 5px; /* Adds some space between the text and the border */
+  }
+  

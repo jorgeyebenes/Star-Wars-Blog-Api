@@ -1,0 +1,12 @@
+jumbo-header {
+        background-color: rgb(38, 77, 38);
+        color: white;
+
+}
+.text-h1 {
+    color: rgba(121, 150, 255, 0.509);
+    text-shadow: 0px 1px 10px blue;
+}
+.text-under-title {
+    color: rgba(252, 0, 34, 0.486);
+}
