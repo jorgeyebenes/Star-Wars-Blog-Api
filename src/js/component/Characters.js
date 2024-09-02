@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 import { CardComponent } from "../component/CardComponent";
+import "/workspaces/Star-Wars-Blog-Api/src/styles/home.css";
 
 
 export const Characters = () => {
@@ -10,10 +11,10 @@ export const Characters = () => {
         
         <>
             <p className="text-warning text-center display-1">Characters</p>
-            <div className="d-flex mb-5 flex-wrap text-center justify-content-center">
+            <div className="">
             {store.character && (
                     store.character.map((character, index) => (
-                        <div className='ps-4 pt-3 personajes fade-in'>
+                        <div className='ps-4 pt-3 characters fade-in'>
                             <CardComponent key={index} title={character.name} paginaIndividual={`/info_character/${character.uid}/${character.name}`} favourite={store.favoritos?.some(fav => fav.id === character.uid) ? null : () => actions.addFavourite(character.name, character.uid, character.description)} 
 									corazon={store.favoritos?.some(fav => fav.id === character.uid)
 										? <i className="fa-solid fa-heart"></i>
